@@ -3,3 +3,57 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container{
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+}
+
+.desktop{
+    display: none;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.j-between{
+    justify-content: space-between;
+}
+
+.align-center{
+    align-items: center;
+}
+
+
+/* ----- HEADER ----- */
+header{
+    height: 80px;
+    background-color: #0084FD;
+}
+
+.buttons{
+    color: white;
+    font-size: 20px;
+}
+
+ul li{
+    list-style: none;
+    padding-right: 30px;
+}
+
+/* MAIN */
+
+
+
+/* ----- GENERAL RESPONSIVE ----- */
+@media screen and (min-width:780px){
+    header .container .buttons{
+        display: none;
+    }
+
+    header .container .menu{
+        display: block;
+    }
+}
