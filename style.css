@@ -5,10 +5,26 @@
 }
 
 .container{
-    padding: 2rem 0;
+    padding: 0 2rem;
     margin: 0 auto;
-    width: 90%;
-    height: 100%;
+    width: 100%;
+}
+
+.debug{
+    background-color: bisque;
+    border: 1px solid black;
+    min-height: 80px;
+}
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col{
+    width: 100%;
+    height: 200px;
 }
 
 .desktop{
@@ -23,114 +39,119 @@
     flex-wrap: nowrap;
 }
 
-.j-between{
-    justify-content: space-between;
-}
-
 .align-center{
     align-items: center;
 }
 
+.image-cards{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: black;
+}
 
 /* ----- HEADER ----- */
-header{
-    height: 80px;
+header .container{
+    display: flex;
+    justify-content: space-between;
     background-color: #0084FD;
 }
 
-.buttons{
-    color: white;
-    font-size: 20px;
+header .desktop-menu{
+    display: none;
 }
 
-ul li{
-    list-style: none;
-    padding-right: 30px;
-}
 
 /* MAIN */
-.row{
-    padding-top: 25px;
+
+#intro .col{
+    padding: 15px;
 }
 
-.col-lg{
-    height: 610px;
-    width: 100%;
-    background-color: #B5DDFF;
-    border-radius: 30px;
+#intro .col .box{
+    background-color: aquamarine;
+    border-radius: 15px;
+
+    /* debug */
+    height: 100%;
 }
 
-.col-md{
-    height: 360px;
-    width: 100%;
-    background-color: #B5DDFF;
-    border-radius: 30px;
-}
-
-.col-sm{
-    height: 360px;
-    width: 100%;
-    background-color: #B5DDFF;
-    border-radius: 30px;
-}
-
-/* ----- PURPLE ----- */
-.purple{
-    height: 1500px;
-    background-color:#9593E6;
-    margin-top: 90px;
-}
-
-.purple img{
+.testimonial-cards{
     text-align: center;
-    padding-top: 70px;
-    width: 80%;
 }
 
 
 
+/* ----- AREA RESPONSIVE ----- */
+@media screen and (min-width: 480px){
 
-
-
-/* ----- GENERAL RESPONSIVE ----- */
-@media screen and (min-width:379px){
-    header .container .buttons{
-        display: none;
-    }
-
-    header .container .menu{
-        display: block;
-    }
 }
 
 @media screen and (min-width:780px){
-    header .container .buttons{
+    .container{
+        max-width: 100%;
+    }
+
+    #intro .col:first-child{
+        width: calc(100% / 1.5);
+    }
+
+    #intro .col{
+        width: calc(100% / 3);
+    }
+
+    #intro .col:first-child .col{
+        width: 100%;
+    }
+
+    #testimonials .col:first-child{
+        width: calc(100% / 3);
+    }
+
+    #testimonials .col{
+        width: calc(100% / 1.5);
+    }
+    
+    #benefit .col{
+        width: 50%;
+    }
+
+    #about .col{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1200px){
+    header .buttons{
+        display: none;
+    }
+    
+    header .desktop-menu{
         display: block;
     }
 
-    header .container .menu{
-        display: none;
+    .container{
+        max-width: 1200px;
     }
 
-    main .row .col-lg{
-        margin-right: 20px;
-        width: 66.6%;
+    #intro .col:first-child .col{
+        width: 50%;
     }
 
-    main .row .col-md{
-        display: flex;
-        flex-wrap: nowrap;
-        width: 33.3%;
-        height: 610px;
+    #planning .col{
+        width: 50%;
     }
 
-    main .row .col-sm{
-        margin-right: 20px;
+    #benefit .col{
         width: calc(100% / 3);
-        height: 450px;
     }
 
-    main .row .col-sm:last-child{
-        margin-right: 0;
+    #about .col:first-child{
+        width: calc(100% / 1.5);
+    }
+
+    #about .col{
+        width: calc(100% / 3);
     }
 }
