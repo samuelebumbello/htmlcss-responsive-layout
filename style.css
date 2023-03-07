@@ -5,6 +5,7 @@
 }
 
 .container{
+    padding: 2rem 0;
     margin: 0 auto;
     width: 90%;
     height: 100%;
@@ -18,8 +19,8 @@
     display: flex;
 }
 
-.wrap{
-    flex-wrap: wrap;
+.no-wrap{
+    flex-wrap: nowrap;
 }
 
 .j-between{
@@ -48,27 +49,88 @@ ul li{
 }
 
 /* MAIN */
+.row{
+    padding-top: 25px;
+}
+
 .col-lg{
-    margin-top: 50px;
     height: 610px;
+    width: 100%;
+    background-color: #B5DDFF;
+    border-radius: 30px;
+}
+
+.col-md{
+    height: 360px;
+    width: 100%;
     background-color: #B5DDFF;
     border-radius: 30px;
 }
 
 .col-sm{
-    margin-top: 30px;
     height: 360px;
+    width: 100%;
     background-color: #B5DDFF;
     border-radius: 30px;
 }
 
+/* ----- PURPLE ----- */
+.purple{
+    height: 1500px;
+    background-color:#9593E6;
+    margin-top: 90px;
+}
+
+.purple img{
+    text-align: center;
+    padding-top: 70px;
+    width: 80%;
+}
+
+
+
+
+
+
 /* ----- GENERAL RESPONSIVE ----- */
-@media screen and (min-width:780px){
+@media screen and (min-width:379px){
     header .container .buttons{
         display: none;
     }
 
     header .container .menu{
         display: block;
+    }
+}
+
+@media screen and (min-width:780px){
+    header .container .buttons{
+        display: block;
+    }
+
+    header .container .menu{
+        display: none;
+    }
+
+    main .row .col-lg{
+        margin-right: 20px;
+        width: 66.6%;
+    }
+
+    main .row .col-md{
+        display: flex;
+        flex-wrap: nowrap;
+        width: 33.3%;
+        height: 610px;
+    }
+
+    main .row .col-sm{
+        margin-right: 20px;
+        width: calc(100% / 3);
+        height: 450px;
+    }
+
+    main .row .col-sm:last-child{
+        margin-right: 0;
     }
 }
